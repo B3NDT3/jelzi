@@ -12,17 +12,12 @@
 
   <body>
 <div class="main-container">
-                  <div class="text-box"></div>
-
+      <div class="text-box"></div>
       <div class="container">
-      <div class="parallelogram">
-        <!-- <div class="left-border"></div> -->
-      </div>
+      <div class="parallelogram"></div>
       <div class="parallelogram"></div>
       <div class="parallelogram"></div>
 
-      <!-- <div class="light light-top"></div>
-      <div class="light light-bottom"></div> -->
 </div></div>
 
   </body>
@@ -30,7 +25,7 @@
 <style>
 
 * {
-   /* font-family: 'Nunito', sans-serif;*/
+
   font-family: 'Libre Franklin', sans-serif;
   
 }
@@ -76,6 +71,7 @@ body {
   height: 70px;
   transform: skew(20deg);
   will-change: auto;
+  animation: parallelogram-move linear 15s infinite;
 }
 .text-box {
   position: absolute;
@@ -85,24 +81,18 @@ body {
   width: 200px;
     z-index: 1;
 }
-.parallelogram:nth-of-type(1){
-  animation: parallelogram-move ease-in-out 15s infinite;
-  animation-delay: 1.5s;
+  .parallelogram:nth-of-type(1){
   background: var(--lightgrey);
   z-index: 3;
     width: 300px;
 }
 .parallelogram:nth-of-type(2){
-  animation: parallelogram-move2 ease-in-out 15s infinite;
-  animation-delay: 1.5s;
   z-index: 2;
   left: 30px;
     width: 290px;
   background: var(--midgrey);
 }
 .parallelogram:nth-of-type(3){
-  animation: parallelogram-move3 ease-in-out 15s infinite;
-  animation-delay: 1.5s;
   z-index: 1;  
   left: 60px;
     width: 280px;
@@ -110,73 +100,14 @@ body {
 }
   
 @keyframes parallelogram-move {
-  0% {
-  width:300px;
+  0%,100% {
+  transform:scaleX(1) skew(20deg) ;
   }
   50% {
-  width: 330px;
-  }
-  100% {
-  width:300px;
-  }
-}
-  
-@keyframes parallelogram-move2 {
-  0% {
-  width:290px;
-  }
-  50% {
-  width: 330px;
-  }
-  100% {
-  width: 290px;
+  transform:scaleX(1.2) skew(20deg);
   }
 }
 
-@keyframes parallelogram-move3 {
-  0% {
-  width:280px;
-  }
-  50% {
-  width: 320px;
-  }
-  100% {
-  width: 280px;
-  }
-}
-
-
-
-
-
-.light-top {
-  top: 0;
-  left: 17px;
-}
-
-.light-bottom {
-  top: 95px;
-  left: -17px;
-}
-
-@keyframes light-move {
-  0% {
-    width: 0px;
-  }
-  50% {
-    width: 400px;
-  }
-  100% {
-    width: 0px;
-  }
-}
-
-.left-border {
-  height: 100%;
-  width: 8px;
-  background-color: var(--red);
-  box-shadow: 0 0 8px var(--red);
-}
   
 </style>
 
