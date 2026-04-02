@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="src/js/main.js"></script>
+    <title>Title</title>
+    <link rel="shortcut icon" type="image/x-icon" href="src/img/pixelheart.png">
+  </head>
+
+
+
+  <body>
+<div class="main-container">
+                  <div class="text-box"></div>
+      <div class="container">
+      <div class="parallelogram">
+      </div>
+      <div class="parallelogram"></div>
+      <div class="parallelogram"></div>
+</div></div>
+
+  </body>
+
+<style>
+
+* {
+   /* font-family: 'Nunito', sans-serif;*/
+  font-family: 'Libre Franklin', sans-serif;
+  
+}
+
+  :root {
+  --pgrey: #23272a;
+   --backgroundColor: #1B1B1B;
+   --backgroundGrey:#1B1B1B;
+   --white: #fbfbfb;
+   --lightgrey: #32333B;
+   --midgrey: #1C1D22;
+   --darkgrey: #151317;
+   --eisschnapsblau: #4bd2d2;
+   --blau: #00a2ed;
+   --redshine: #f56b6b;
+   --red: #ff3131;
+}
+
+body {
+  display: flex;
+  align-items:center;
+ justify-content: center;
+  height: 100%;
+  width: 100%;
+    position: relative;
+  /* background-color: #151317; */
+}
+
+.main-container {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+        /* -webkit-transform: scale(-1, -1);
+    -moz-transform: scale(-1, -1);
+    -o-transform: scale(-1, -1); */
+    transform: scaleX(-1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 200px;
+  width: 500px;
+  margin-left: 50px;
+}
+
+.parallelogram {
+  position: absolute;
+  height: 70px;
+  transform: skew(20deg);
+  will-change: auto;
+}
+.text-box {
+  position: absolute;
+  border-left: var(--red) solid 12px;
+  background-color: var(--lightgrey);
+  height: 70px;
+  width: 200px;
+    z-index: 1;
+}
+.parallelogram:nth-of-type(1){
+  animation: parallelogram-move ease-in-out 15s infinite;
+  animation-delay: 1.5s;
+  background: var(--lightgrey);
+  z-index: 3;
+    width: 300px;
+}
+.parallelogram:nth-of-type(2){
+  animation: parallelogram-move2 ease-in-out 15s infinite;
+  animation-delay: 1.5s;
+  z-index: 2;
+  left: 30px;
+    width: 290px;
+  background: var(--midgrey);
+}
+.parallelogram:nth-of-type(3){
+  animation: parallelogram-move3 ease-in-out 15s infinite;
+  animation-delay: 1.5s;
+  z-index: 1;  
+  left: 60px;
+    width: 280px;
+  background: var(--darkgrey);
+}
+  
+@keyframes parallelogram-move {
+  0% {
+  width:300px;
+  }
+  50% {
+  width: 330px;
+  }
+  100% {
+  width:300px;
+  }
+}
+  
+@keyframes parallelogram-move2 {
+  0% {
+  width:290px;
+  }
+  50% {
+  width: 330px;
+  }
+  100% {
+  width: 290px;
+  }
+}
+
+@keyframes parallelogram-move3 {
+  0% {
+  width:280px;
+  }
+  50% {
+  width: 320px;
+  }
+  100% {
+  width: 280px;
+  }
+}
+
+
+
+
+.light {
+  transform: skew(-20deg);
+  z-index: 5;
+  height: 5px;
+  /* width: 40px; */
+  animation: light-move ease-in 3s;
+  background-color: var(--eisschnapsblau);
+  position: absolute;
+  box-shadow: 0 0 10px var(--eisschnapsblau);
+}
+
+.light-top {
+  top: 0;
+  left: 17px;
+}
+
+.light-bottom {
+  top: 95px;
+  left: -17px;
+}
+
+@keyframes light-move {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 400px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+.left-border {
+  height: 100%;
+  width: 8px;
+  background-color: var(--eisschnapsblau);
+  box-shadow: 0 0 8px var(--eisschnapsblau);
+}
+  
+</style>
+
+  
+</html>
