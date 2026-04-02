@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="src/js/main.js"></script>
+    <title>Title</title>
+    <link rel="shortcut icon" type="image/x-icon" href="src/img/pixelheart.png">
+  </head>
+
+
+
+  <body>
+
+ <svg xmlns="http://www.w3.org/2000/svg"  width="1920" height="1080" viewBox="0 0 1920 1080">
+   <defs>
+      <linearGradient id='a' gradientUnits='objectBoundingBox' x1='0' y1='0' x2='1' y2='1'>
+         <stop offset='0' stop-color='#1C1C21'>
+            <animate attributeName="stop-color"
+               values="#1C1C21;#2F3037;#121316;#0A090B;#121316;#2F3037;#1C1C21;" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <stop offset='.5' stop-color='#0A090B'>
+            <animate attributeName="stop-color"
+               values="#0A090B;#121316;#2F3037;#2F3037;#1C1C21;#121316;#0A090B;" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <stop offset='1' stop-color='#121316'>
+            <animate attributeName="stop-color"
+               values="#121316;#2F3037;#1C1C21;#2F3037;#121316;#0A090B;#121316;" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5"
+            dur="20s" repeatCount="indefinite" />
+      </linearGradient>
+      <linearGradient id='b' gradientUnits='objectBoundingBox' x1='0' y1='1' x2='1' y2='1'>
+         <stop offset='0' stop-color='#1C1C21'>
+            <animate attributeName="stop-color"
+               values="#1C1C21;#2F3037;#121316;#0A090B;#121316;#2F3037;#1C1C21;" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <stop offset='1' stop-color='#0A090B' stop-opacity="0">
+            <animate attributeName="stop-color"
+               values="#0A090B;#121316;#2F3037;#1C1C21;#2F3037;#121316;#0A090B;" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <animateTransform attributeName="gradientTransform" type="rotate" values="360 .5 .5;0 .5 .5" class="ignore"
+            dur="20s" repeatCount="indefinite" />
+      </linearGradient>
+   </defs>
+   <rect fill='url(#a)' width='100%' height='100%' />
+   <rect fill='url(#b)' width='100%' height='100%' />
+</svg>
+  </body>
+
+<style>
+
+  /* :root {
+  --pgrey: #26262C;
+   --backgroundColor: #1B1B1B;
+   --backgroundGrey:#1B1B1B;
+   --white: #fbfbfb;
+   --lightgrey:#2F3037;
+   --midgrey: #1C1D22;
+   --darkgrey: #151317;
+   --one:  #26262C; #1C1C21;
+   --two: #2F3037; #2F3037;
+   --three:  #1C1D22; #121316;
+   --four:  #151317; #0A090B;
+
+   
+} */
+</style>
+
+  
+</html> 
+ 
+ 
+
+
+
+
