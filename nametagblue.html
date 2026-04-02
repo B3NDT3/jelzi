@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="src/js/main.js"></script>
+    <title>Title</title>
+    <link rel="shortcut icon" type="image/x-icon" href="src/img/pixelheart.png">
+  </head>
+
+
+
+  <body>
+
+
+      <div class="container">
+      <div class="parallelogram">
+        <div class="left-border"></div>
+      </div>
+      <div class="parallelogram"></div>
+      <div class="parallelogram"></div>
+      <div class="light light-top"></div>
+      <div class="light light-bottom"></div>
+</div>
+</div>
+  </body>
+
+<style>
+
+* {
+   /* font-family: 'Nunito', sans-serif;*/
+  font-family: 'Libre Franklin', sans-serif;
+  
+}
+
+:root {
+  --pgrey: #23272a;
+   --backgroundColor: #1B1B1B;
+   --backgroundGrey:#1B1B1B;
+   --white: #fbfbfb;
+   --lightyellow: #FDFBD1;
+   --midyellow: #FEF47A ;
+   --darkyellow:#CDC12A;
+   --brown: #AC6315;
+   --lightgrey: #32333B;
+   --midgrey: #1C1D22;
+   --darkgrey: #151317;
+   --eisschnapsblau: #2FFEFE;
+}
+
+body {
+  display: flex;
+  align-items:center;
+ justify-content: center;
+  height: 100%;
+  width: 100%;
+  /* background-color: #151317; */
+}
+.awsome-text-container {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  transform: translate(150px,25px);
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.8em;
+}
+
+.animated-letter {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+    animation-fill-mode: both;
+    color: white;
+}
+
+.animated-letter:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animated-letter:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.animated-letter:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.animated-letter:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.animated-letter:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+.image-container {
+    margin: auto;
+    display: table;
+}
+
+.text-container {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: auto;
+    text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 1px;
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 200px;
+  width: 500px;
+}
+
+.parallelogram {
+  position: absolute;
+  height: 100px;
+  transform: skew(-20deg);
+  width: 400px;
+  will-change: transition;
+}
+
+.parallelogram:nth-of-type(1){
+  animation: parallelogram-move linear 6s infinite;
+  animation-delay: 1.5s;
+  background: var(--lightgrey);
+  z-index: 3;
+}
+.parallelogram:nth-of-type(2){
+  animation: parallelogram-move2 linear 6s infinite;
+  animation-delay: 1.5s;
+  z-index: 2;
+  left: 30px;
+  background: var(--midgrey);
+}
+.parallelogram:nth-of-type(3){
+  animation: parallelogram-move3 linear 6s infinite;
+  animation-delay: 1.5s;
+  z-index: 1;  
+  left: 60px;
+  background: var(--darkgrey);
+}
+  
+@keyframes parallelogram-move {
+  0% {
+  width:400px;
+  }
+  50% {
+  width: 450px;
+  }
+  100% {
+  width:400px;
+  }
+}
+  
+@keyframes parallelogram-move2 {
+  0% {
+  width:400px;
+  }
+  50% {
+  width: 455px;
+  }
+  100% {
+  width: 395px;
+  }
+}
+
+@keyframes parallelogram-move3 {
+  0% {
+  width:400px;
+  }
+  50% {
+  width: 460px;
+  }
+  100% {
+  width: 390px;
+  }
+}
+
+
+
+
+.light {
+  transform: skew(-20deg);
+  z-index: 5;
+  height: 5px;
+  /* width: 40px; */
+  animation: light-move ease-in 3s;
+  background-color: var(--eisschnapsblau);
+  position: absolute;
+  box-shadow: 0 0 10px var(--eisschnapsblau);
+}
+
+.light-top {
+  top: 0;
+  left: 17px;
+}
+
+.light-bottom {
+  top: 95px;
+  left: -17px;
+}
+
+@keyframes light-move {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 400px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+.left-border {
+  height: 100%;
+  width: 8px;
+  background-color: var(--eisschnapsblau);
+  box-shadow: 0 0 8px var(--eisschnapsblau);
+}
+
+    
+/* 16 hoch, 11 breit */
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+</style>
+
+  
+</html>
